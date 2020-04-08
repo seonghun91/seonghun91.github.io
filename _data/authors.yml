@@ -12,11 +12,11 @@ davidjeong:
 
   # This photo will be used in the about section
   picture:
-    #src:             /assets/img/me.jpeg
+    src:             /assets/img/me.jpeg
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      #1x:            /assets/img/me.jpeg
-      #2x:            /assets/img/me.jpeg
+      1x:            /assets/img/me.jpeg
+      2x:            /assets/img/me.jpeg
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
@@ -58,7 +58,7 @@ davidjeong:
     # stumbleupon:     <username>
     # paypal:          <username>
     # email:           mailto:sunghuni91@gmail.com
-    # rss:             https://theorydb.github.io/feed.xml
+    # rss:             https://seonghun91.github.io/feed.xml
 
 # Another author
 mdo:
