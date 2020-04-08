@@ -1,10 +1,10 @@
 ---
 layout: list
-title: 기타
-slug: 기타
+title: Statistic
+slug: Statistic
 menu: true
 submenu: false
-order: 6
+order: 4
 description: >
-  기타 잡동사니  
+  통계 기본기
 ---

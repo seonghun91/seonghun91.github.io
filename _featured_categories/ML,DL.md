@@ -6,5 +6,5 @@ menu: true
 submenu: false
 order: 2
 description: >
-  ML/DL 최신 논문 및 동향 공부 정리
+  ML/DL 기본기 및 최신 동향 이해
 ---
