@@ -54,7 +54,7 @@ disqus_shortname:    david
 copyright:           '&copy; 2020.04. by DavidJeong'
 
 # Format of the permalinks
-permalink:           pretty
+# permalink:           pretty
 
 # Pagination configuration (used by the `blog` layout)
 paginate:            8
