@@ -9,10 +9,6 @@ comments: true
 ---
 
 
-
-## Distributed and parallel time series feature extraction for industrial big data applications
-
-
 - 논문 링크 : https://arxiv.org/pdf/1610.07717v3.pdf
 - 코드 : https://github.com/blue-yonder/tsfresh
 
@@ -47,7 +43,8 @@ timeseries, y = load_robot_execution_failures()
 #timeseries.head()
 ```
 
-(사진1)
+<img width="288" alt="스크린샷 2020-04-10 오후 7 48 04" src="https://user-images.githubusercontent.com/28383546/78986582-89fa8a00-7b66-11ea-96b3-4b903f8fc745.png">
+
 
 친절하게도 패키지 내에 사용할만한 예제를 첨부해 주었다. 예제가 되는 timeseries 데이터는 id(88개) 별로 time이 0~15를 가지는 데이터이며,
 그 결과값은 y에 binary로 저장되어 있다.
@@ -63,8 +60,8 @@ extracted_features = extract_features(timeseries, column_id="id", column_sort="t
 
     Feature Extraction: 100%|██████████| 20/20 [00:07<00:00,  2.90it/s]
 
+<img width="695" alt="스크린샷 2020-04-10 오후 7 48 33" src="https://user-images.githubusercontent.com/28383546/78986628-a3033b00-7b66-11ea-9d63-e219a2889ee7.png">
 
-(사진2)
 
 앞서 논문 중 접근방안의 '1)'단계인 파생변수들을 생성하는 단계이다.  
 위의 표와 같이 6개의 변수들에 대해 무려 4536개의 feature들을 생성했다.  
@@ -138,7 +135,7 @@ features_filtered = select_features(extracted_features, y)
 #features_filtered.head()
 ```
 
-(사진3)
+<img width="772" alt="스크린샷 2020-04-10 오후 7 49 06" src="https://user-images.githubusercontent.com/28383546/78986645-b0202a00-7b66-11ea-9053-471acfef1729.png">
 
 앞서 변수들을 생성했다면, 변수 선별 작업들을 진행한다.  
 select_features 함수를 통해 최종적으로 627개의 변수들이 최종 선별 되었다.  
