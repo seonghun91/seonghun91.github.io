@@ -14,22 +14,17 @@ comments: true
 
  시계열 데이터의 feature 추출에 대한 논문이다. 이 논문을 첫 번째로 선택한 이유는, 아무래도 paperswithcodes의 time series 도메인 중 인기가 높았으며, 코드 또한 잘 구현되어 있기 때문이다. 해당 논문을 간략하게 요약하면 다음과 같다.
 
- #### 도입 배경
- - 머신 러닝 문제에서 feature selection은 늘 중요하게 다뤄지고 있는 문제이며, 특히 시계열 데이터셋인 경우 더욱 어려움  
- - Boruta, LDA, DTW 등등의 방식을 통해 Feature들을 다루고 있음
-
- #### (본 논문의) 접근 방안
+#### (본 논문의) 접근 방안
  - 1) 전체 변수들을 대상으로 파생 feature들을 생성(min, max, std 등)
  - 2) 생성된 전체 변수들을 한개씩 Target과 Hypothsis test 진행하여 변수별 p-value 생성
  - 3) feature significance test를 통해 최종 변수 선별  
      - FDR(False Discovery Rate)를 잡기 위한 과정
      - Benjamini-Yekutieli procedure를 통해 기준선 이하의 p-value를 가진 변수들만 선택
      
- #### 실험 결과  
+#### 실험 결과  
  - boruta, LDA, DTW 등과 비교했을때 준수한 accuracy와 std값을 보이며 수행시간도 적었음 
 
-
- #### 구현 코드 분석
+#### 구현 코드 분석
  - 논문을 tsfresh라는 파이썬 패키지로 구현하고 있는데, 아래 코드를 통해서 해당 접근 방식을 파악해보았다.
 
 
