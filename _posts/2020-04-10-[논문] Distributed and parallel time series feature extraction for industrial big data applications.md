@@ -165,13 +165,10 @@ calculate_relevance_table 함수가 최종적으로 돌아가며, 이 함수에�
 - 2) 변수 선별단계에서 p-value가 낮으며 상관관계가 높은 변수들이 많다면 선별되는 변수들의 질이 떨어질 수 있는점?
     - 이 점은 논문에서도 변수 선별 전, 또는 후에 pca를 권장하긴 했다. pca를 그렇게 좋아하진 않기에.. 해당 부분이 우려된다면 초기 변수를 어느정도 다뤄주는 작업이 필요할 것 같다. 
 
-#### 더 공부할 내용들
+#### 더 공부할 논문 / 할일
 - LDA 논문(B. D. Fulcher, N. S. Jones, Highly Comparative Feature-Based Time-Series Classification, Knowledge and Data Engineering, IEEE Transactions on 26 (12) (2014) 3026–3037.)
 - Boruta 논문 (M. B. Kursa, W. R. Rudnicki, The all relevant feature selection using random forest, arXiv preprint arXiv:1106.5112 .)
 - DTW 논문 ( S. Van Der Walt, S. C. Colbert, G. Varoquaux, The NumPy Array: A Structure for Efficient Numerical Computation, Computing in Science & Engineering 13 (2) (2011) 22–30.)
+- 패키지를 현재 참가중인 kaggle 대회에 적용해보기
+- 이 패키지에서 사용된 time series feature들을 하나씩 뜯어보고 향후 활용할 수 있도록 체화하기
 - 깔끔하게 만든 패키지를 뜯어보니 나도 나만의 패키지를 만들고 싶....~~지만 매우 고되고 힘든 작업이겠지~~
-
-
-```python
-
-```
