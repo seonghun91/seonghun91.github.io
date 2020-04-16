@@ -1,3 +1,13 @@
+---
+layout: post
+title:  "[논문] CID: an efficient complexity-invariant distance for time series"
+subtitle:   ""
+categories: TimeSeries
+#tags: 시계열
+comments: true
+---
+
+
 
 ## CID: an efficient complexity-invariant distance for time series  
 
