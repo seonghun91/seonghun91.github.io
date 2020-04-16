@@ -16,19 +16,23 @@ comments: true
 - 눈으로 보기에 유사해 보이는 두개의 object가 실제로는 더 거리차이가 날 수 있음  
 - 특히, 복잡해 보이는 개체들은 단순한 개체에 더 assign 되는 경향이 있음.
     - 나의 비루한 영어 번역을 보완 설명하기 위해, 논문에서의 예시를 통해 설명하고자 한다.
-    <img width="407" alt="스크린샷 2020-04-16 오후 6 47 56" src="https://user-images.githubusercontent.com/28383546/79445894-5dd48280-8018-11ea-86df-1f5d71acc1d4.png">
+    <img width="407" alt="스크린샷 2020-04-16 오후 6 47 56" src="https://user-images.githubusercontent.com/28383546/79445894-5dd48280-8018-11ea-86df-1f5d71acc1d4.png">. 
+    
     - 위 그림(출처 : 본 논문 Fig.8 참조)을 설명하면, 도형의 중심부터 변까지의 거리를 각각 시계열 데이터로 풀어낸 그림이다. 변의 숫자가 늘어날수록, complexity도 늘어나는것을 알 수 있다.  
-    <img width="667" alt="스크린샷 2020-04-16 오후 6 48 06" src="https://user-images.githubusercontent.com/28383546/79445901-6036dc80-8018-11ea-9a79-96d08510a387.png">
+    <img width="667" alt="스크린샷 2020-04-16 오후 6 48 06" src="https://user-images.githubusercontent.com/28383546/79445901-6036dc80-8018-11ea-9a79-96d08510a387.png">. 
+    
     - 만약 여기서, 4번 도형과 가장 유사한 생김새의 도형은 무엇일까요? 라고 물으면 어떻게 대답할것인가? 아마도 5번이라고 대답할것이다. 마찬가지로, 32는? 이라는 질문에는 24로 대답을 할 것이고.
     - 그런데 각 도형의 시계열 데이터를 Euclidean Distance를 구한 위의 표를 보면(출처 : 본 논문 table 1 참조) 이상한 점들이 보인다, 32번 도형은 24보다도 4 도형과 더 가깝다는 결과가 나온다. 처음 도입 배경에서 복잡해 보이는 개체들이 단순한 개체에 더 assign되는 경향이 있다는 뜻이 바로 이말이다.  
 
 
 #### (본 논문의) 접근 방안
 - 이를 해결하기 위해 본 논문은 제목에서도 나와있는 CID(Complexity Invariant Distance)라는 개념을 제시하고 있다.
-    <img width="335" alt="스크린샷 2020-04-16 오후 6 56 46" src="https://user-images.githubusercontent.com/28383546/79445914-6462fa00-8018-11ea-92e4-575b8cf98cd3.png">
+    <img width="335" alt="스크린샷 2020-04-16 오후 6 56 46" src="https://user-images.githubusercontent.com/28383546/79445914-6462fa00-8018-11ea-92e4-575b8cf98cd3.png">. 
+    
     
 - 위 식을 보면 시계열 Q, C에 대해 CID는 ED와 CF의 곱으로 나타낼 수 있다. 여기서 ED는 앞에서도 소개된 Euclidean Distance이고, 뒤의 CF가 바로 Complexity Correction Factor이다. 즉 기존 ED에 CF가 추가된 형태라고 볼 수 있다.
-    <img width="339" alt="스크린샷 2020-04-16 오후 6 58 56" src="https://user-images.githubusercontent.com/28383546/79445921-67f68100-8018-11ea-80c1-c6113595cd2b.png">
+    <img width="339" alt="스크린샷 2020-04-16 오후 6 58 56" src="https://user-images.githubusercontent.com/28383546/79445921-67f68100-8018-11ea-80c1-c6113595cd2b.png">. 
+    
 - CF의 산출 방식은 다음과 같다. 각 시계열의 CE를 구해준 뒤, 위의 식에 대입하면 된다. 여기서 CE는 시계열의 complexity를 의미한다. 논문에서의 설명대로 쉽게 설명하면, 복잡한 시계열은 그렇지 않은 시계열에 비해 직선으로 늘렸을때 더 긴 길이를 가지게 될것이다.(위의 32번과 4번 도형을 직선으로 늘어뜨린다고 생각해보자.). 이를 계산하기 위해 diff 함수를 사용하여 계산할수 있으며, 해당 계산식을 파이썬으로 간단하게 구현하면 다음과 같다.
 
 
