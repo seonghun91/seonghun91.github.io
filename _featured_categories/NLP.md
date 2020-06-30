@@ -1,10 +1,10 @@
 ---
 layout: list
-title: ML/DL
-slug: ML/DL
+title: NLP
+slug: NLP
 menu: true
 submenu: false
 order: 2
 description: >
-  ML/DL 기본기 및 최신 동향 이해
+  NLP 관련 논문/공부 정리 
 ---

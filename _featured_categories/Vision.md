@@ -1,10 +1,10 @@
 ---
 layout: list
-title: Statistic
-slug: Statistic
+title: Vision
+slug: Vision
 menu: true
 submenu: false
-order: 4
+order: 3
 description: >
-  통계 기본기
+  Vision
 ---
